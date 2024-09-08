@@ -89,6 +89,7 @@ namespace Oneiromancer.TMP.Typewriter
             for (int i = startIdx; i < count; i++)
             {
                 Tick(i);
+                count = _text.textInfo.characterCount;
                 
                 var currentChar = _text.textInfo.characterInfo[i].character;
                 CharacterRenderedEvent?.Invoke(currentChar);
